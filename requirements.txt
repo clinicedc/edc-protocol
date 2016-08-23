@@ -1,0 +1,2 @@
+Django
+git+https://github.com/erikvw/django-appconfig-ini@develop#egg=django-appconfig-ini
