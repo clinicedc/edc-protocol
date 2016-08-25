@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'edc_base.apps.AppConfig'
     'edc_protocol.apps.AppConfig'
-    'example.apps.AppConfig',
+    'edc_example.apps.AppConfig',
 ]
 
 MIDDLEWARE = [

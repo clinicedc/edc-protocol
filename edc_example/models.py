@@ -5,4 +5,4 @@ from edc_protocol.model_mixins import EnrollmentCapMixin
 class EnrollmentModel(EnrollmentCapMixin, BaseUuidModel):
 
     class Meta:
-        app_label = 'example'
+        app_label = 'edc_example'
