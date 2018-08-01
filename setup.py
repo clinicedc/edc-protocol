@@ -25,9 +25,6 @@ setup(
     long_description=README,
     zip_safe=False,
     keywords='django research protocol EDC',
-    install_requires=[
-        'pytz',
-    ],
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
