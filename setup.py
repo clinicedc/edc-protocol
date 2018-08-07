@@ -25,6 +25,7 @@ setup(
     long_description=README,
     zip_safe=False,
     keywords='django research protocol EDC',
+    install_requires=['edc-base'],
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
