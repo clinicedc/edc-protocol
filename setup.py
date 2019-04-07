@@ -25,7 +25,7 @@ setup(
     long_description=README,
     zip_safe=False,
     keywords='django research protocol EDC',
-    install_requires=['edc-base'],
+    install_requires=["edc_utils", "edc_navbar", "edc_dashboard"],
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
@@ -33,7 +33,6 @@ setup(
         'Intended Audience :: Science/Research',
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
         'Operating System :: OS Independent',
-        'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Topic :: Internet :: WWW/HTTP',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
