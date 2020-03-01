@@ -1,3 +1,5 @@
 django_crypto_fields
 edc-test-utils
 edc-randomization
+edc_model
+git+https://github.com/erikvw/django-simple-history@admin_revert_permissions
