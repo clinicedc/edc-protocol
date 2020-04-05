@@ -9,7 +9,7 @@ from django.test.runner import DiscoverRunner
 from edc_test_utils import DefaultTestSettings
 from os.path import abspath, dirname
 
-app_name = 'edc_protocol'
+app_name = "edc_protocol"
 base_dir = dirname(abspath(__file__))
 
 DEFAULT_SETTINGS = DefaultTestSettings(
@@ -19,21 +19,22 @@ DEFAULT_SETTINGS = DefaultTestSettings(
     ETC_DIR=os.path.join(base_dir, app_name, "tests", "etc"),
     EDC_NAVBAR_DEFAULT=app_name,
     INSTALLED_APPS=[
-        'django.contrib.admin',
-        'django.contrib.auth',
-        'django.contrib.contenttypes',
-        'django.contrib.sessions',
-        'django.contrib.messages',
-        'django.contrib.staticfiles',
-        'django.contrib.sites',
-        'django_crypto_fields.apps.AppConfig',
-        'edc_auth.apps.AppConfig',
-        'edc_device.apps.AppConfig',
-        'edc_sites.apps.AppConfig',
-        'edc_identifier.apps.AppConfig',
-        'edc_notification.apps.AppConfig',
-        'edc_randomization.apps.AppConfig',
-        'edc_protocol.apps.AppConfig',
+        "django.contrib.admin",
+        "django.contrib.auth",
+        "django.contrib.contenttypes",
+        "django.contrib.sessions",
+        "django.contrib.messages",
+        "django.contrib.staticfiles",
+        "django.contrib.sites",
+        "django_crypto_fields.apps.AppConfig",
+        "multisite",
+        "edc_auth.apps.AppConfig",
+        "edc_device.apps.AppConfig",
+        "edc_sites.apps.AppConfig",
+        "edc_identifier.apps.AppConfig",
+        "edc_notification.apps.AppConfig",
+        "edc_randomization.apps.AppConfig",
+        "edc_protocol.apps.AppConfig",
     ],
     add_dashboard_middleware=True,
 ).settings
@@ -43,10 +44,11 @@ def main():
     if not settings.configured:
         settings.configure(**DEFAULT_SETTINGS)
     django.setup()
-    tags = [t.split('=')[1] for t in sys.argv if t.startswith('--tag')]
-    failfast = True if [t for t in sys.argv if t == '--failfast'] else False
+    tags = [t.split("=")[1] for t in sys.argv if t.startswith("--tag")]
+    failfast = True if [t for t in sys.argv if t == "--failfast"] else False
     failures = DiscoverRunner(failfast=failfast, tags=tags).run_tests(
-        [f'{app_name}.tests'])
+        [f"{app_name}.tests"]
+    )
     sys.exit(failures)
 
 
