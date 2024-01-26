@@ -3,6 +3,8 @@
 edc-protocol
 ------------
 
+Protocol as in a research protocol.
+
 TODO: Add back features to manage enrollment caps per subject types, if this is still where to do it
 
 
